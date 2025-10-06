@@ -1,0 +1,227 @@
+/* PALETA DE COLORES COOL SYSTEMS */
+:root {
+    --color-fondo: #1E1E1E; /* Negro Grafito */
+    --color-acento: #4682B4; /* Azul Acero */
+    --color-texto: #FFFFFF; /* Blanco */
+    --font-principal: 'Arial', sans-serif; /* Tipografía base */
+}
+
+/* ESTILOS GLOBALES Y TIPOGRAFÍA */
+body {
+    font-family: var(--font-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    /* Ajuste necesario para evitar que el header fijo oculte el contenido */
+    padding-top: 60px; /* Añade un espacio arriba del body igual a la altura del header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.text-center { text-align: center; }
+
+/* ---- 1. ESTILOS DE LA BARRA DE NAVEGACIÓN FIJA ---- */
+
+.main-nav {
+    position: fixed; /* Mantiene el elemento fijo en la ventana */
+    top: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.95); /* Negro Grafito con ligera transparencia */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para que destaque */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--color-acento); /* Resaltado en Azul Acero */
+}
+
+/* Estilo del CTA en la Navegación */
+.cta-button-nav {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button-nav:hover {
+    background-color: #5D9ECF;
+}
+
+/* ---- SECCIÓN HERO (HEADER) ---- */
+.hero-section {
+    min-height: 80vh; /* Altura de la sección */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* IMAGEN DE FONDO: Usa una imagen oscura y de alta resolución */
+    background-image: url('URL_DE_TU_IMAGEN_DE_TALLER.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* CAPA OSCURA para que el texto resalte */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2; /* Asegura que el contenido esté sobre la capa oscura */
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em; /* Tipografía Sólida */
+    margin-bottom: 0.5em;
+    color: var(--color-texto);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* CTA - BOTÓN PRINCIPAL */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-acento); /* Azul Acero */
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #5D9ECF; /* Un tono más claro para el hover */
+}
+
+/* ---- SECCIÓN DE DIFERENCIADORES CLAVE ---- */
+.differentiators {
+    padding: 60px 0;
+    background-color: var(--color-fondo);
+}
+
+.differentiators .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.diff-card {
+    flex-basis: calc(33% - 20px);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutilmente más claro */
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid var(--color-acento); /* Línea de Azul Acero */
+}
+
+.diff-card h3 {
+    color: var(--color-texto);
+    font-size: 1.4em;
+}
+
+.diff-card .icon {
+    font-size: 3em;
+    color: var(--color-acento); /* Iconos en Azul Acero */
+    margin-bottom: 15px;
+}
+
+/* ---- SECCIÓN LLAMADA A SERVICIOS ---- */
+.services-cta {
+    padding: 40px 0;
+    background-color: #2a2a2a; /* Ligeramente más claro que el fondo principal */
+}
+
+.cta-secondary {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid var(--color-acento);
+    color: var(--color-acento);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.cta-secondary:hover {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+}
+
+/* ---- BOTÓN FLOTANTE DE WHATSAPP ---- */
+
+.whatsapp-float {
+    position: fixed; /* Siempre visible */
+    width: 60px;
+    height: 60px;
+    bottom: 30px; /* Posición de la esquina inferior */
+    right: 30px;
+    background-color: #25D366; /* Verde de WhatsApp */
+    color: #FFF;
+    border-radius: 50px; /* Círculo perfecto */
+    text-align: center;
+    font-size: 30px;
+    z-index: 2000; /* Prioridad máxima */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
